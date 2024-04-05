@@ -1,0 +1,25 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :0:362:x, comp button1:::p:38:p}}"
+			"$verticalGroup": "par l {seq l {comp button1:::p::p, space ::270:x}}"
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 480, 640 )
+			"maximumSize": new java.awt.Dimension( 480, 640 )
+			"minimumSize": new java.awt.Dimension( 480, 640 )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "X"
+				"maximumSize": new java.awt.Dimension( 30, 30 )
+				"minimumSize": new java.awt.Dimension( 30, 30 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
