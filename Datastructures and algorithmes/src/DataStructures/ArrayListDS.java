@@ -98,7 +98,7 @@ public class ArrayListDS<K extends Comparable<K>, V> implements DataStructure<K,
     private static class Entry<K, V>
     {
         private final K key;
-        private final V value;
+        private V value;
 
         public Entry(K key, V Value)
         {
