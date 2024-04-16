@@ -1,0 +1,111 @@
+title,author,rating,publication_date
+To Kill a Mockingbird,Harper Lee,4.28,1960-07-11
+1984,George Orwell,4.19,1949-06-08
+The Great Gatsby,F. Scott Fitzgerald,3.93,1925-04-10
+Pride and Prejudice,Jane Austen,4.27,1813-01-28
+The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
+Animal Farm,George Orwell,3.91,1945-08-17
+The Hobbit,J.R.R. Tolkien,4.27,1937-09-21
+Lord of the Flies,William Golding,3.68,1954-09-17
+To the Lighthouse,Virginia Woolf,3.77,1927-05-05
+Moby-Dick,Herman Melville,3.52,1851-10-18
+The Picture of Dorian Gray,Oscar Wilde,4.07,1890-07-20
+Dracula,Bram Stoker,3.99,1897-05-26
+Frankenstein,Mary Shelley,3.78,1818-01-01
+Jane Eyre,Charlotte Brontë,4.13,1847-10-16
+The Odyssey,Homer,3.75,-800
+The Count of Monte Cristo,Alexandre Dumas,4.24,1844-08-28
+The Adventures of Huckleberry Finn,Mark Twain,3.82,1884-12-10
+Catch-22,Joseph Heller,3.99,1961-11-10
+Wuthering Heights,Emily Brontë,3.86,1847-12-19
+Crime and Punishment,Fyodor Dostoevsky,4.24,1866-11-14
+Great Expectations,Charles Dickens,3.77,1861-08-01
+The Grapes of Wrath,John Steinbeck,4.08,1939-04-14
+The Bell Jar,Sylvia Plath,4.00,1963-01-14
+Brave New World,Aldous Huxley,3.99,1932-07-01
+The Lord of the Rings,J.R.R. Tolkien,4.50,1954-07-29
+War and Peace,Leo Tolstoy,4.11,1869-01-01
+The Divine Comedy,Dante Alighieri,4.06,1320-01-01
+The Canterbury Tales,Geoffrey Chaucer,3.50,1400-01-01
+Don Quixote,Miguel de Cervantes,3.87,1605-01-01
+One Hundred Years of Solitude,Gabriel García Márquez,4.07,1967-05-30
+The Alchemist,Paulo Coelho,3.84,1988-01-01
+The Road,Cormac McCarthy,3.96,2006-09-26
+Les Misérables,Victor Hugo,4.16,1862-01-01
+Anna Karenina,Leo Tolstoy,4.04,1877-01-01
+Slaughterhouse-Five,Kurt Vonnegut,4.08,1969-03-31
+The Scarlet Letter,Nathaniel Hawthorne,3.39,1850-01-01
+The Kite Runner,Khaled Hosseini,4.28,2003-05-29
+Gone with the Wind,Margaret Mitchell,4.29,1936-06-30
+The Secret Garden,Frances Hodgson Burnett,4.13,1911-08-09
+The Shining,Stephen King,4.22,1977-01-28
+Ulysses,James Joyce,3.74,1922-02-02
+The Chronicles of Narnia,C.S. Lewis,4.26,1950-10-16
+Little Women,Louisa May Alcott,4.06,1868-09-30
+The Handmaid's Tale,Margaret Atwood,4.10,1985-01-01
+Beloved,Toni Morrison,3.85,1987-09-02
+The Sun Also Rises,Ernest Hemingway,3.82,1926-10-22
+The Stranger,Albert Camus,3.97,1942-01-01
+The Martian,Andy Weir,4.40,2011-09-27
+The Hitchhiker's Guide to the Galaxy,Douglas Adams,4.22,1979-10-12
+The Hunger Games,Suzanne Collins,4.33,2008-09-14
+Gulliver's Travels,Jonathan Swift,3.57,1726-01-01
+A Game of Thrones,George R.R. Martin,4.45,1996-08-06
+The Da Vinci Code,Dan Brown,3.81,2003-03-18
+Harry Potter and the Sorcerer's Stone,J.K. Rowling,4.48,1997-06-26
+The Girl with the Dragon Tattoo,Stieg Larsson,4.13,2005-08-01
+The Joy Luck Club,Amy Tan,3.91,1989-01-01
+The Help,Kathryn Stockett,4.47,2009-02-10
+The Goldfinch,Donna Tartt,3.90,2013-10-22
+The Night Circus,Erin Morgenstern,4.03,2011-09-13
+The Fault in Our Stars,John Green,4.20,2012-01-10
+Life of Pi,Yann Martel,3.90,2001-09-11
+The Name of the Wind,Patrick Rothfuss,4.55,2007-03-27
+The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
+The Book Thief,Markus Zusak,4.36,2005-03-14
+The Girl on the Train,Paula Hawkins,3.89,2015-01-13
+A Brief History of Time,Stephen Hawking,4.17,1988-04-01
+Dune,Frank Herbert,4.22,1965-06-01
+The Giver,Lois Lowry,4.13,1993-04-26
+The Road Not Taken and Other Poems,Robert Frost,4.38,1916-01-01
+The Adventures of Tom Sawyer,Mark Twain,3.91,1876-01-01
+The Time Traveler's Wife,Audrey Niffenegger,3.96,2003-09-09
+The Old Man and the Sea,Ernest Hemingway,3.76,1952-09-01
+The Color Purple,Alice Walker,4.21,1982-01-01
+The Brothers Karamazov,Fyodor Dostoevsky,4.32,1880-01-01
+The Help,Kathryn Stockett,4.47,2009-02-10
+The Goldfinch,Donna Tartt,3.90,2013-10-22
+The Night Circus,Erin Morgenstern,4.03,2011-09-13
+The Fault in Our Stars,John Green,4.20,2012-01-10
+Life of Pi,Yann Martel,3.90,2001-09-11
+The Name of the Wind,Patrick Rothfuss,4.55,2007-03-27
+The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
+The Book Thief,Markus Zusak,4.36,2005-03-14
+The Girl on the Train,Paula Hawkins,3.89,2015-01-13
+A Brief History of Time,Stephen Hawking,4.17,1988-04-01
+Dune,Frank Herbert,4.22,1965-06-01
+The Giver,Lois Lowry,4.13,1993-04-26
+The Road Not Taken and Other Poems,Robert Frost,4.38,1916-01-01
+The Adventures of Tom Sawyer,Mark Twain,3.91,1876-01-01
+The Time Traveler's Wife,Audrey Niffenegger,3.96,2003-09-09
+The Old Man and the Sea,Ernest Hemingway,3.76,1952-09-01
+The Color Purple,Alice Walker,4.21,1982-01-01
+The Brothers Karamazov,Fyodor Dostoevsky,4.32,1880-01-01
+The Help,Kathryn Stockett,4.47,2009-02-10
+The Goldfinch,Donna Tartt,3.90,2013-10-22
+The Night Circus,Erin Morgenstern,4.03,2011-09-13
+The Fault in Our Stars,John Green,4.20,2012-01-10
+Life of Pi,Yann Martel,3.90,2001-09-11
+The Name of the Wind,Patrick Rothfuss,4.55,2007-03-27
+The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
+The Book Thief,Markus Zusak,4.36,2005-03-14
+The Girl on the Train,Paula Hawkins,3.89,2015-01-13
+A Brief History of Time,Stephen Hawking,4.17,1988-04-01
+Dune,Frank Herbert,4.22,1965-06-01
+The Giver,Lois Lowry,4.13,1993-04-26
+The Road Not Taken and Other Poems,Robert Frost,4.38,1916-01-01
+The Adventures of Tom Sawyer,Mark Twain,3.91,1876-01-01
+The Time Traveler's Wife,Audrey Niffenegger,3.96,2003-09-09
+The Old Man and the Sea,Ernest Hemingway,3.76,1952-09-01
+The Color Purple,Alice Walker,4.21,1982-01-01
+The Brothers Karamazov,Fyodor Dostoevsky,4.32,1880-01-01
