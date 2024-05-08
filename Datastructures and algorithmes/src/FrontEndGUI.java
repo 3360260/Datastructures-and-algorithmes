@@ -2,74 +2,57 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 
 public class FrontEndGUI extends JFrame implements ActionListener {
 
     private final JTextArea outputArea;
-    private final JButton runButton;
 
     public FrontEndGUI() {
         setTitle("Algorithms Duration GUI");
-        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
+
+        // Create the main panel with GridBagLayout
+        JPanel mainPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10); // Set 10px insets (gap)
 
         // "Read Books CSV File" button
-        JButton readCSVFile = new JButton("Read Books CSV File");
-        readCSVFile.addActionListener(e -> {
-            readCSVFile.setEnabled(false);
-            // Simulate loading data
-            SwingUtilities.invokeLater(() -> {
-                readCSVFile.setEnabled(true);
-                readCSVFile.setBackground(Color.decode("#C1C7C8"));
-            });
-        });
-        readCSVFile.setBackground(Color.decode("#C1C7C8"));
-        readCSVFile.setForeground(Color.BLACK);
-        Font windows95StyleFont = new Font("Microsoft Sans Serif", Font.BOLD, 18);
-        readCSVFile.setFont(windows95StyleFont);
-        add(readCSVFile, BorderLayout.NORTH);
-
-        // Output area panel
-        JPanel outputPanel = new JPanel(new BorderLayout());
-        outputArea = new JTextArea();
-        outputArea.setEditable(false);
-        outputPanel.add(new JScrollPane(outputArea), BorderLayout.CENTER);
-        add(outputPanel, BorderLayout.CENTER);
-
-        // Panel for radio button selections (data structure and algorithm)
-        JPanel selectionPanel = new JPanel(new GridLayout(1, 2));
-        JPanel dataStructurePanel = createSelectionPanel("Select Data Structure",
-                "LinkedList", "ArrayList", "TreeMap");
-        JPanel algorithmPanel = createSelectionPanel("Select Algorithm",
-                "Sort by title", "Search book by title", "Sort by natural order", "Search books by author");
-        selectionPanel.add(dataStructurePanel);
-        selectionPanel.add(algorithmPanel);
-        add(selectionPanel, BorderLayout.SOUTH);
+        JButton readCSVFileButton = new JButton("Read Books CSV File");
+        readCSVFileButton.addActionListener(this);
+        mainPanel.add(readCSVFileButton, createGridBagConstraints(gbc, 0, 0, 1, 1, GridBagConstraints.HORIZONTAL));
 
         // "Run Algorithm" button
-        runButton = new JButton("Run Algorithm");
-        runButton.addActionListener(this);
-        runButton.setBackground(Color.decode("#C1C7C8"));
-        add(runButton, BorderLayout.EAST);
+        JButton runAlgorithmButton = new JButton("Run Algorithm");
+        runAlgorithmButton.addActionListener(this);
+        mainPanel.add(runAlgorithmButton, createGridBagConstraints(gbc, 2, 0, 1, 1, GridBagConstraints.HORIZONTAL));
 
-        // Set preferred sizes to maintain layout
-        outputPanel.setPreferredSize(new Dimension(800, 400));
-        selectionPanel.setPreferredSize(new Dimension(800, 200));
+        // "Select Data Structure" panel
+        JPanel dataStructurePanel = createSelectionPanel("Select Data Structure",
+                "LinkedList", "ArrayList", "TreeMap");
+        selectDefaultRadioButton(dataStructurePanel, "LinkedList"); // Set default selection
+        mainPanel.add(dataStructurePanel, createGridBagConstraints(gbc, 0, 1, 1, 1, GridBagConstraints.BOTH));
 
+        // "Select Algorithm" panel
+        JPanel algorithmPanel = createSelectionPanel("Select Algorithm",
+                "Sort by title", "Search book by title", "Sort by natural order", "Search books by author");
+        selectDefaultRadioButton(algorithmPanel, "Sort by title"); // Set default selection
+        mainPanel.add(algorithmPanel, createGridBagConstraints(gbc, 2, 1, 1, 1, GridBagConstraints.BOTH));
+
+        // Output area panel
+        outputArea = new JTextArea(10, 50);
+        outputArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(outputArea);
+        mainPanel.add(scrollPane, createGridBagConstraints(gbc, 0, 2, 3, 1, GridBagConstraints.BOTH));
+
+        getContentPane().add(mainPanel);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
     private JPanel createSelectionPanel(String title, String... options) {
-        JPanel panel = new JPanel(new GridLayout(options.length + 1, 1));
+        JPanel panel = new JPanel(new GridLayout(options.length, 1));
         panel.setBorder(BorderFactory.createTitledBorder(title));
-
-        JLabel titleLabel = new JLabel(title);
-        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(titleLabel);
 
         ButtonGroup buttonGroup = new ButtonGroup();
         for (String option : options) {
@@ -82,15 +65,39 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         return panel;
     }
 
+    private void selectDefaultRadioButton(JPanel panel, String defaultOption) {
+        Component[] components = panel.getComponents();
+        for (Component component : components) {
+            if (component instanceof JRadioButton) {
+                JRadioButton radioButton = (JRadioButton) component;
+                if (radioButton.getActionCommand().equals(defaultOption)) {
+                    radioButton.setSelected(true);
+                }
+            }
+        }
+    }
+
+    private GridBagConstraints createGridBagConstraints(GridBagConstraints gbc, int x, int y, int width, int height, int fill) {
+        gbc.gridx = x;
+        gbc.gridy = y;
+        gbc.gridwidth = width;
+        gbc.gridheight = height;
+        gbc.fill = fill;
+        gbc.weightx = 1.0; // Take up available horizontal space
+        gbc.weighty = 1.0; // Take up available vertical space
+        return gbc;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == runButton) {
-            runButton.setEnabled(false);
+        if (e.getActionCommand().equals("Read Books CSV File")) {
+            // Handle "Read Books CSV File" button click
+            // Simulate loading data
+            outputArea.append("Reading Books CSV File...\n");
+        } else if (e.getActionCommand().equals("Run Algorithm")) {
+            // Handle "Run Algorithm" button click
             // Simulate executing the algorithm
-            SwingUtilities.invokeLater(() -> {
-                runButton.setEnabled(true);
-                outputArea.append("Algorithm executed!\n");
-            });
+            outputArea.append("Running Algorithm...\n");
         }
     }
 
