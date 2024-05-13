@@ -1,109 +1,100 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class FrontEndGUI extends JFrame implements ActionListener {
 
     private final JTextArea outputArea;
+    private final JButton readCSVFileButton;
+    private final JTable dataTable;
 
     public FrontEndGUI() {
-        setTitle("Algorithms Duration GUI");
+        setTitle("CSV File Viewer");
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create the main panel with GridBagLayout
-        JPanel mainPanel = new JPanel(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10); // Set 10px insets (gap)
+        setLayout(new BorderLayout());
 
         // "Read Books CSV File" button
-        JButton readCSVFileButton = new JButton("Read Books CSV File");
+        readCSVFileButton = new JButton("Read Books CSV File");
         readCSVFileButton.addActionListener(this);
-        mainPanel.add(readCSVFileButton, createGridBagConstraints(gbc, 0, 0, 1, 1, GridBagConstraints.HORIZONTAL));
+        readCSVFileButton.setBackground(Color.decode("#C1C7C8"));
+        readCSVFileButton.setForeground(Color.BLACK);
+        Font buttonFont = new Font("Microsoft Sans Serif", Font.BOLD, 18);
+        readCSVFileButton.setFont(buttonFont);
+        add(readCSVFileButton, BorderLayout.NORTH);
 
-        // "Run Algorithm" button
-        JButton runAlgorithmButton = new JButton("Run Algorithm");
-        runAlgorithmButton.addActionListener(this);
-        mainPanel.add(runAlgorithmButton, createGridBagConstraints(gbc, 2, 0, 1, 1, GridBagConstraints.HORIZONTAL));
-
-        // "Select Data Structure" panel
-        JPanel dataStructurePanel = createSelectionPanel("Select Data Structure",
-                "LinkedList", "ArrayList", "TreeMap");
-        selectDefaultRadioButton(dataStructurePanel, "LinkedList"); // Set default selection
-        mainPanel.add(dataStructurePanel, createGridBagConstraints(gbc, 0, 1, 1, 1, GridBagConstraints.BOTH));
-
-        // "Select Algorithm" panel
-        JPanel algorithmPanel = createSelectionPanel("Select Algorithm",
-                "Sort by title", "Search book by title", "Sort by natural order", "Search books by author");
-        selectDefaultRadioButton(algorithmPanel, "Sort by title"); // Set default selection
-        mainPanel.add(algorithmPanel, createGridBagConstraints(gbc, 2, 1, 1, 1, GridBagConstraints.BOTH));
-
-        // Output area panel
-        outputArea = new JTextArea(10, 50);
+        // Output area panel for displaying table
+        JPanel outputPanel = new JPanel(new BorderLayout());
+        outputArea = new JTextArea();
         outputArea.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(outputArea);
-        mainPanel.add(scrollPane, createGridBagConstraints(gbc, 0, 2, 3, 1, GridBagConstraints.BOTH));
+        outputPanel.add(new JScrollPane(outputArea), BorderLayout.CENTER);
+        add(outputPanel, BorderLayout.CENTER);
 
-        getContentPane().add(mainPanel);
+        // Table to display CSV data
+        dataTable = new JTable();
+        JScrollPane tableScrollPane = new JScrollPane(dataTable);
+        outputPanel.add(tableScrollPane, BorderLayout.CENTER);
+
+        // Set preferred sizes to maintain layout
+        outputPanel.setPreferredSize(new Dimension(800, 400));
+
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
-    private JPanel createSelectionPanel(String title, String... options) {
-        JPanel panel = new JPanel(new GridLayout(options.length, 1));
-        panel.setBorder(BorderFactory.createTitledBorder(title));
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == readCSVFileButton) {
+            // Prompt user to select CSV file
+            JFileChooser fileChooser = new JFileChooser();
+            int returnValue = fileChooser.showOpenDialog(null);
 
-        ButtonGroup buttonGroup = new ButtonGroup();
-        for (String option : options) {
-            JRadioButton radioButton = new JRadioButton(option);
-            radioButton.setActionCommand(option);
-            buttonGroup.add(radioButton);
-            panel.add(radioButton);
-        }
-
-        return panel;
-    }
-
-    private void selectDefaultRadioButton(JPanel panel, String defaultOption) {
-        Component[] components = panel.getComponents();
-        for (Component component : components) {
-            if (component instanceof JRadioButton) {
-                JRadioButton radioButton = (JRadioButton) component;
-                if (radioButton.getActionCommand().equals(defaultOption)) {
-                    radioButton.setSelected(true);
-                }
+            if (returnValue == JFileChooser.APPROVE_OPTION) {
+                // Read and display CSV data
+                String csvFilePath = fileChooser.getSelectedFile().getPath();
+                displayCSVData(csvFilePath);
             }
         }
     }
 
-    private GridBagConstraints createGridBagConstraints(GridBagConstraints gbc, int x, int y, int width, int height, int fill) {
-        gbc.gridx = x;
-        gbc.gridy = y;
-        gbc.gridwidth = width;
-        gbc.gridheight = height;
-        gbc.fill = fill;
-        gbc.weightx = 1.0; // Take up available horizontal space
-        gbc.weighty = 1.0; // Take up available vertical space
-        return gbc;
-    }
+    private void displayCSVData(String csvFilePath) {
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
+            DefaultTableModel tableModel = new DefaultTableModel();
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("Read Books CSV File")) {
-            // Handle "Read Books CSV File" button click
-            // Simulate loading data
-            outputArea.append("Reading Books CSV File...\n");
-        } else if (e.getActionCommand().equals("Run Algorithm")) {
-            // Handle "Run Algorithm" button click
-            // Simulate executing the algorithm
-            outputArea.append("Running Algorithm...\n");
+            // Read the first line as table headers
+            String headerLine = br.readLine();
+            if (headerLine != null) {
+                String[] headers = headerLine.split(",");
+                for (String header : headers) {
+                    tableModel.addColumn(header.trim());
+                }
+            }
+
+            // Read remaining lines as table rows
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(",");
+                tableModel.addRow(data);
+            }
+
+            // Set table model to display in JTable
+            dataTable.setModel(tableModel);
+
+            // Display success message
+            outputArea.setText("CSV file loaded successfully!\n");
+        } catch (IOException ex) {
+            outputArea.setText("Error reading CSV file: " + ex.getMessage() + "\n");
+            ex.printStackTrace();
         }
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new FrontEndGUI();
-        });
+        SwingUtilities.invokeLater(FrontEndGUI::new);
     }
 }
