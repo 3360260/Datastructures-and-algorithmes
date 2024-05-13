@@ -11,10 +11,11 @@ public class FrontEndGUI extends JFrame implements ActionListener {
 
     private final JTextArea outputArea;
     private final JButton readCSVFileButton;
+    private final JButton runButton;
     private final JTable dataTable;
 
     public FrontEndGUI() {
-        setTitle("CSV File Viewer");
+        setTitle("Algorithms Duration GUI");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -28,12 +29,28 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         readCSVFileButton.setFont(buttonFont);
         add(readCSVFileButton, BorderLayout.NORTH);
 
-        // Output area panel for displaying table
+        // Output area panel for displaying messages
         JPanel outputPanel = new JPanel(new BorderLayout());
         outputArea = new JTextArea();
         outputArea.setEditable(false);
         outputPanel.add(new JScrollPane(outputArea), BorderLayout.CENTER);
         add(outputPanel, BorderLayout.CENTER);
+
+        // Panel for radio button selections (data structure and algorithm)
+        JPanel selectionPanel = new JPanel(new GridLayout(1, 2));
+        JPanel dataStructurePanel = createSelectionPanel("Select Data Structure",
+                "LinkedList", "ArrayList", "TreeMap");
+        JPanel algorithmPanel = createSelectionPanel("Select Algorithm",
+                "Sort by title", "Search book by title", "Sort by natural order", "Search books by author");
+        selectionPanel.add(dataStructurePanel);
+        selectionPanel.add(algorithmPanel);
+        add(selectionPanel, BorderLayout.SOUTH);
+
+        // "Run Algorithm" button
+        runButton = new JButton("Run Algorithm");
+        runButton.addActionListener(this);
+        runButton.setBackground(Color.decode("#C1C7C8"));
+        add(runButton, BorderLayout.EAST);
 
         // Table to display CSV data
         dataTable = new JTable();
@@ -42,10 +59,30 @@ public class FrontEndGUI extends JFrame implements ActionListener {
 
         // Set preferred sizes to maintain layout
         outputPanel.setPreferredSize(new Dimension(800, 400));
+        selectionPanel.setPreferredSize(new Dimension(800, 200));
 
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private JPanel createSelectionPanel(String title, String... options) {
+        JPanel panel = new JPanel(new GridLayout(options.length + 1, 1));
+        panel.setBorder(BorderFactory.createTitledBorder(title));
+
+        JLabel titleLabel = new JLabel(title);
+        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(titleLabel);
+
+        ButtonGroup buttonGroup = new ButtonGroup();
+        for (String option : options) {
+            JRadioButton radioButton = new JRadioButton(option);
+            radioButton.setActionCommand(option);
+            buttonGroup.add(radioButton);
+            panel.add(radioButton);
+        }
+
+        return panel;
     }
 
     @Override
@@ -60,6 +97,9 @@ public class FrontEndGUI extends JFrame implements ActionListener {
                 String csvFilePath = fileChooser.getSelectedFile().getPath();
                 displayCSVData(csvFilePath);
             }
+        } else if (e.getSource() == runButton) {
+            // Simulate executing the algorithm
+            outputArea.append("Algorithm executed!\n");
         }
     }
 
