@@ -20,31 +20,25 @@ public class DatasetProcessor<K extends Comparable<K>, V> {
         this.treeMapTable = treeMapTable;
     }
 
-//    public List<V> sortItems(Comparator<V> comparator, int dataStructureIndex) {
-//        DataStructure<K, V> dataStructure = getSelectedDataStructure(dataStructureIndex);
-//        Iterable<V> items = dataStructure.values();
-//        if (dataStructure instanceof LinkedListDS) {
-//            linkedListTable.bubbleSort(comparator);
-//        } else if (dataStructure instanceof ArrayListDS) {
-//            arrayListTable.quickSort(comparator);
-//        }  // TreeMap is already sorted by its natural ordering
-//
-//        return StreamSupport.stream(items.spliterator(), false)
-//                .collect(Collectors.toList());
-//    }
+    public List<V> sortItemsByNaturalOrder(int dataStructureIndex) {
+        Iterable<V> items = getSelectedDataStructure(dataStructureIndex).values();
+        return StreamSupport.stream(items.spliterator(), false)
+                .sorted()
+                .collect(Collectors.toList());
+    }
+
+    public List<V> sortItems(Comparator<V> comparator, int dataStructureIndex) {
+        Iterable<V> items = getSelectedDataStructure(dataStructureIndex).values();
+        return StreamSupport.stream(items.spliterator(), false)
+                .sorted(comparator)
+                .collect(Collectors.toList());
+    }
 
     public Optional<V> searchItemByCriteria(Predicate<V> criteria, int dataStructureIndex) {
         Iterable<V> items = getSelectedDataStructure(dataStructureIndex).values();
         return StreamSupport.stream(items.spliterator(), false)
                 .filter(criteria)
                 .findFirst();
-    }
-
-    public List<V> sortItemsByNaturalOrder(int dataStructureIndex) {
-        Iterable<V> items = getSelectedDataStructure(dataStructureIndex).values();
-        return StreamSupport.stream(items.spliterator(), false)
-                .sorted()
-                .collect(Collectors.toList());
     }
 
     public List<V> searchItemsByFieldValue(Function<V, String> fieldExtractor, String value, int dataStructureIndex) {
