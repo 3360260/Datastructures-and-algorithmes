@@ -2,7 +2,7 @@ class Book implements Comparable<Book> {
     private String title;
     private String author;
     private double rating;
-    private String pubDate;  // Change to String to handle date format
+    private String pubDate;
 
     public Book(String title, String author, double rating, String pubDate) {
         this.title = title;
