@@ -31,6 +31,8 @@ public class FrontEndGUI extends JFrame implements ActionListener {
     private JRadioButton treeMapRadioButton;
     private ButtonGroup dataStructureGroup;
     private ButtonGroup algorithmGroup;
+    private long startTime;
+    private String currentDataStructure;
 
     public FrontEndGUI() {
         setTitle("Algorithms Duration GUI");
@@ -54,7 +56,6 @@ public class FrontEndGUI extends JFrame implements ActionListener {
 
         JPanel selectionPanel = new JPanel(new GridLayout(1, 2));
 
-        // Left Section
         JPanel leftSelectionPanel = new JPanel(new BorderLayout());
         JPanel dataStructurePanel = createSelectionPanel("Select Data Structure",
                 "LinkedList", "ArrayList", "TreeMap");
@@ -64,7 +65,6 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         leftSelectionPanel.add(runDataStructureButton, BorderLayout.SOUTH);
         selectionPanel.add(leftSelectionPanel);
 
-        // Right Section
         JPanel rightSelectionPanel = new JPanel(new BorderLayout());
         JPanel algorithmPanel = createSelectionPanel("Select Algorithm",
                 "Sort by title", "Search book by title", "Sort by natural order", "Search books by author");
@@ -135,45 +135,6 @@ public class FrontEndGUI extends JFrame implements ActionListener {
             runSelectedAlgorithm();
         }
     }
-
-    private void runDataStructure() {
-        if (dataStructureGroup.getSelection() != null) {
-            String selectedDataStructure = dataStructureGroup.getSelection().getActionCommand();
-            long startTime = System.currentTimeMillis();
-
-            switch (selectedDataStructure) {
-                case "LinkedList":
-                    dataStructure = new LinkedListDS<>();
-                    outputArea.append("Data structure changed to LinkedList.\n");
-                    break;
-                case "ArrayList":
-                    dataStructure = new ArrayListDS<>();
-                    outputArea.append("Data structure changed to ArrayList.\n");
-                    break;
-                case "TreeMap":
-                    dataStructure = new TreeMapDS<>();
-                    outputArea.append("Data structure changed to TreeMap.\n");
-                    break;
-                default:
-                    outputArea.append("Unknown data structure selected.\n");
-            }
-
-            long endTime = System.currentTimeMillis();
-            long elapsedTime = endTime - startTime;
-
-            long minutes = (elapsedTime / 1000) / 60;
-            long seconds = (elapsedTime / 1000) % 60;
-            long milliseconds = elapsedTime % 1000;
-
-            JOptionPane.showMessageDialog(this,
-                    "Switched from data structure X to " + selectedDataStructure + ".\n" +
-                            "Time elapsed: " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds");
-        } else {
-            outputArea.append("Please select a data structure.\n");
-        }
-    }
-
-
 
     private void checkAndLoadCSVFile() {
         String csvFilePath = System.getProperty("user.home") + File.separator + "Documents" + File.separator + "Github" + File.separator + "Datastructures-and-algorithmes" + File.separator + "Datastructures and algorithmes" + File.separator + "src" + File.separator + "dataset" + File.separator + "books.csv";
@@ -268,77 +229,178 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         }
     }
 
-    private void runSelectedAlgorithm() {
-        if (algorithmGroup.getSelection() != null) {
-            String selectedAlgorithm = algorithmGroup.getSelection().getActionCommand();
 
-            executeSelectedAlgorithm(selectedAlgorithm);
+    private void runDataStructure() {
+        if (dataStructureGroup.getSelection() != null) {
+            String selectedDataStructure = dataStructureGroup.getSelection().getActionCommand();
+
+            startTime = System.currentTimeMillis();
+
+            switch (selectedDataStructure) {
+                case "LinkedList":
+                    dataStructure = new LinkedListDS<>();
+                    outputArea.append("Switched from data structure: " + dataStructure.getClass().getSimpleName() + " to LinkedList.\n");
+                    break;
+                case "ArrayList":
+                    dataStructure = new ArrayListDS<>();
+                    outputArea.append("Switched from data structure: " + dataStructure.getClass().getSimpleName() + " to ArrayList.\n");
+                    break;
+                case "TreeMap":
+                    dataStructure = new TreeMapDS<>();
+                    outputArea.append("Switched from data structure: " + dataStructure.getClass().getSimpleName() + " to TreeMap.\n");
+                    break;
+                default:
+                    outputArea.append("Unknown data structure selected.\n");
+            }
+            long endTime = System.currentTimeMillis(); // End time
+            long elapsedTime = endTime - startTime; // Elapsed time in milliseconds
+
+            // Calculate minutes, seconds, and milliseconds
+            long minutes = (elapsedTime / 1000) / 60;
+            long seconds = (elapsedTime / 1000) % 60;
+            long milliseconds = elapsedTime % 1000;
+
+            // Display pop-up window with elapsed time
+            String message = String.format("Switched data from data structure %s to data structure %s. Time elapsed: %d:%02d:%03d",
+                    currentDataStructure, selectedDataStructure, minutes, seconds, milliseconds);
+            JOptionPane.showMessageDialog(this, message, "Data Structure Switch", JOptionPane.INFORMATION_MESSAGE);
+
+            // Update current data structure
+            currentDataStructure = selectedDataStructure;
+
+            // Print the type of data structure
+            printDataStructureType();
         } else {
-            outputArea.append("Please select an algorithm.\n");
+            outputArea.append("Please select a data structure.\n");
         }
     }
 
-    private void executeSelectedAlgorithm(String selectedAlgorithm) {
-        switch (selectedAlgorithm) {
-            case "Sort by title":
-                sortBooksByTitle();
-                break;
-            case "Sort by natural order":
-                sortBooksByNaturalOrder();
-                break;
-            case "Search book by title":
-                searchBookByTitle();
-                break;
-            case "Search books by author":
-                searchBooksByAuthor();
-                break;
-            default:
-                outputArea.append("Unknown algorithm selected.\n");
-        }
-    }
+        private void runSelectedAlgorithm() {
+            if (algorithmGroup.getSelection() != null) {
+                String selectedAlgorithm = algorithmGroup.getSelection().getActionCommand();
 
-    private void sortBooksByTitle() {
+                startTime = System.currentTimeMillis();
+
+                executeSelectedAlgorithm(selectedAlgorithm);
+
+                long elapsedTime = System.currentTimeMillis() - startTime;
+            } else {
+                outputArea.append("Please select an algorithm.\n");
+            }
+        }
+
+        private void executeSelectedAlgorithm(String selectedAlgorithm) {
+            switch (selectedAlgorithm) {
+                case "Sort by title":
+                    sortBooksByTitle();
+                    break;
+                case "Sort by natural order":
+                    sortBooksByNaturalOrder();
+                    break;
+                case "Search book by title":
+                    searchBookByTitle();
+                    break;
+                case "Search books by author":
+                    searchBooksByAuthor();
+                    break;
+                default:
+                    outputArea.append("Unknown algorithm selected.\n");
+            }
+        }
+
+        private void showElapsedTime(long elapsedTime) {
+            long minutes = (elapsedTime / 1000) / 60;
+            long seconds = (elapsedTime / 1000) % 60;
+            long milliseconds = elapsedTime % 1000;
+
+            JOptionPane.showMessageDialog(this,
+                    "Time elapsed: " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds",
+                    "Time Elapsed",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
+
+
+            private void sortBooksByTitle() {
+                startTime = System.currentTimeMillis();
         List<Book> sortedBooks = StreamSupport.stream(dataStructure.values().spliterator(), false)
                 .sorted(Comparator.comparing(Book::getTitle))
                 .collect(Collectors.toList());
         updateTableWithSortedData(sortedBooks);
+
+                long elapsedTime = System.currentTimeMillis() - startTime;
+                showElapsedTime(elapsedTime);
     }
 
     private void sortBooksByNaturalOrder() {
+            long startTime = System.currentTimeMillis();
         List<Book> sortedBooks = StreamSupport.stream(dataStructure.values().spliterator(), false)
                 .sorted()
                 .collect(Collectors.toList());
         updateTableWithSortedData(sortedBooks);
+
+        long elapsedTime = System.currentTimeMillis() - startTime;
+        showElapsedTime(elapsedTime);
     }
 
     private void searchBookByTitle() {
         String searchTerm = JOptionPane.showInputDialog(this, "Enter book title to search:");
         if (searchTerm != null && !searchTerm.isEmpty()) {
-            Book foundBook = dataStructure.get(searchTerm);
-            if (foundBook != null) {
-                outputArea.append("Book found: " + foundBook + "\n");
+            startTime = System.currentTimeMillis();
+
+            List<Book> foundBooks = StreamSupport.stream(dataStructure.values().spliterator(), false)
+                    .filter(book -> book.getTitle().toLowerCase().contains(searchTerm.toLowerCase()))
+                    .sorted(Comparator.comparingInt(book -> {
+                        String title = book.getTitle().toLowerCase();
+                        return title.indexOf(searchTerm.toLowerCase());
+                    }))
+                    .collect(Collectors.toList());
+
+            long elapsedTime = System.currentTimeMillis() - startTime;
+
+            if (!foundBooks.isEmpty()) {
+                outputArea.append("Books with titles containing '" + searchTerm + "':\n");
+                for (Book book : foundBooks) {
+                    outputArea.append(book.toString() + "\n");
+                }
+                updateTableWithSortedData(foundBooks);
             } else {
-                outputArea.append("Book with title '" + searchTerm + "' not found.\n");
+                outputArea.append("No books found with titles containing '" + searchTerm + "'.\n");
             }
+            showElapsedTime(elapsedTime);
         }
     }
+
 
     private void searchBooksByAuthor() {
         String authorName = JOptionPane.showInputDialog(this, "Enter author name to search books:");
         if (authorName != null && !authorName.isEmpty()) {
+            startTime = System.currentTimeMillis();
+
             List<Book> foundBooks = StreamSupport.stream(dataStructure.values().spliterator(), false)
-                    .filter(book -> book.getAuthor().equalsIgnoreCase(authorName))
+                    .filter(book -> book.getAuthor().toLowerCase().contains(authorName.toLowerCase()))
+                    .sorted(Comparator.comparingInt(book -> {
+                        String author = book.getAuthor().toLowerCase();
+                        return author.indexOf(authorName.toLowerCase());
+                    }))
                     .collect(Collectors.toList());
+
+            long elapsedTime = System.currentTimeMillis() - startTime;
+
             if (!foundBooks.isEmpty()) {
-                outputArea.append("Books by author '" + authorName + "':\n");
+                outputArea.append("Books by author containing '" + authorName + "':\n");
                 for (Book book : foundBooks) {
                     outputArea.append(book.toString() + "\n");
                 }
+                updateTableWithSortedData(foundBooks);
             } else {
-                outputArea.append("No books found by author '" + authorName + "'.\n");
+                outputArea.append("No books found with author containing '" + authorName + "'.\n");
             }
+            showElapsedTime(elapsedTime);
         }
     }
+
+
 
     private void updateTableWithSortedData(List<Book> sortedData) {
         DefaultTableModel tableModel = (DefaultTableModel) dataTable.getModel();
@@ -351,7 +413,5 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         dataTable.repaint();
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(FrontEndGUI::new);
-    }
+
 }

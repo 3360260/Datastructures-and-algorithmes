@@ -61,7 +61,6 @@ The Night Circus,Erin Morgenstern,4.03,2011-09-13
 The Fault in Our Stars,John Green,4.20,2012-01-10
 Life of Pi,Yann Martel,3.90,2001-09-11
 The Name of the Wind,Patrick Rothfuss,4.55,2007-03-27
-The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
 The Book Thief,Markus Zusak,4.36,2005-03-14
 The Girl on the Train,Paula Hawkins,3.89,2015-01-13
 A Brief History of Time,Stephen Hawking,4.17,1988-04-01
@@ -73,39 +72,554 @@ The Time Traveler's Wife,Audrey Niffenegger,3.96,2003-09-09
 The Old Man and the Sea,Ernest Hemingway,3.76,1952-09-01
 The Color Purple,Alice Walker,4.21,1982-01-01
 The Brothers Karamazov,Fyodor Dostoevsky,4.32,1880-01-01
-The Help,Kathryn Stockett,4.47,2009-02-10
-The Goldfinch,Donna Tartt,3.90,2013-10-22
-The Night Circus,Erin Morgenstern,4.03,2011-09-13
-The Fault in Our Stars,John Green,4.20,2012-01-10
-Life of Pi,Yann Martel,3.90,2001-09-11
-The Name of the Wind,Patrick Rothfuss,4.55,2007-03-27
-The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
-The Book Thief,Markus Zusak,4.36,2005-03-14
-The Girl on the Train,Paula Hawkins,3.89,2015-01-13
-A Brief History of Time,Stephen Hawking,4.17,1988-04-01
-Dune,Frank Herbert,4.22,1965-06-01
-The Giver,Lois Lowry,4.13,1993-04-26
-The Road Not Taken and Other Poems,Robert Frost,4.38,1916-01-01
-The Adventures of Tom Sawyer,Mark Twain,3.91,1876-01-01
-The Time Traveler's Wife,Audrey Niffenegger,3.96,2003-09-09
-The Old Man and the Sea,Ernest Hemingway,3.76,1952-09-01
-The Color Purple,Alice Walker,4.21,1982-01-01
-The Brothers Karamazov,Fyodor Dostoevsky,4.32,1880-01-01
-The Help,Kathryn Stockett,4.47,2009-02-10
-The Goldfinch,Donna Tartt,3.90,2013-10-22
-The Night Circus,Erin Morgenstern,4.03,2011-09-13
-The Fault in Our Stars,John Green,4.20,2012-01-10
-Life of Pi,Yann Martel,3.90,2001-09-11
-The Name of the Wind,Patrick Rothfuss,4.55,2007-03-27
-The Catcher in the Rye,J.D. Salinger,3.80,1951-07-16
-The Book Thief,Markus Zusak,4.36,2005-03-14
-The Girl on the Train,Paula Hawkins,3.89,2015-01-13
-A Brief History of Time,Stephen Hawking,4.17,1988-04-01
-Dune,Frank Herbert,4.22,1965-06-01
-The Giver,Lois Lowry,4.13,1993-04-26
-The Road Not Taken and Other Poems,Robert Frost,4.38,1916-01-01
-The Adventures of Tom Sawyer,Mark Twain,3.91,1876-01-01
-The Time Traveler's Wife,Audrey Niffenegger,3.96,2003-09-09
-The Old Man and the Sea,Ernest Hemingway,3.76,1952-09-01
-The Color Purple,Alice Walker,4.21,1982-01-01
-The Brothers Karamazov,Fyodor Dostoevsky,4.32,1880-01-01
+The Wind-Up Bird Chronicle,Haruki Murakami,4.17,1995-04-12
+Norwegian Wood,Haruki Murakami,4.04,1987-09-04
+Bel Canto,Ann Patchett,3.96,2001-05-22
+The Lovely Bones,Alice Sebold,3.82,2002-06-01
+Atonement,Ian McEwan,3.92,2001-09-21
+Memoirs of a Geisha,Arthur Golden,4.12,1997-09-27
+Middlesex,Jeffrey Eugenides,4.00,2002-09-04
+The Poisonwood Bible,Barbara Kingsolver,4.06,1998-10-01
+White Teeth,Zadie Smith,3.82,2000-01-27
+Never Let Me Go,Kazuo Ishiguro,4.10,2005-03-03
+The Brief Wondrous Life of Oscar Wao,Junot Díaz,3.92,2007-09-06
+Everything is Illuminated,Jonathan Safran Foer,3.74,2002-04-16
+All the Light We Cannot See,Anthony Doerr,4.32,2014-05-06
+The Secret History,Donna Tartt,4.10,1992-09-01
+The Shadow of the Wind,Carlos Ruiz Zafón,4.26,2001-06-01
+Ready Player One,Ernest Cline,4.26,2011-08-16
+Station Eleven,Emily St. John Mandel,4.04,2014-09-09
+The Underground Railroad,Colson Whitehead,4.02,2016-08-02
+The Light Between Oceans,M.L. Stedman,4.03,2012-07-31
+The Nightingale,Kristin Hannah,4.58,2015-02-03
+Where the Crawdads Sing,Delia Owens,4.44,2018-08-14
+Big Little Lies,Liane Moriarty,4.29,2014-07-29
+Gone Girl,Gillian Flynn,4.10,2012-06-05
+Eleanor Oliphant Is Completely Fine,Gail Honeyman,4.26,2017-05-09
+Good Omens,Neil Gaiman & Terry Pratchett,4.25,1990-05-01
+American Gods,Neil Gaiman,4.11,2001-06-19
+Coraline,Neil Gaiman,4.05,2002-08-04
+A Prayer for Owen Meany,John Irving,4.24,1989-03-14
+The Cider House Rules,John Irving,4.13,1985-01-01
+Lolita,Vladimir Nabokov,3.88,1955-09-15
+Rebecca,Daphne du Maurier,4.22,1938-08-01
+The Hunchback of Notre-Dame,Victor Hugo,4.24,1831-01-14
+The Master and Margarita,Mikhail Bulgakov,4.31,1967-01-01
+Perfume: The Story of a Murderer,Patrick Süskind,4.02,1985-02-06
+The God of Small Things,Arundhati Roy,3.97,1997-04-04
+In Cold Blood,Truman Capote,4.05,1966-01-17
+1Q84,Haruki Murakami,4.05,2009-05-29
+The House of the Spirits,Isabel Allende,4.22,1982-01-01
+Blindness,José Saramago,4.12,1995-10-01
+A Confederacy of Dunces,John Kennedy Toole,3.88,1980-04-13
+Midnight's Children,Salman Rushdie,3.98,1981-04-01
+The Unbearable Lightness of Being,Milan Kundera,4.12,1984-04-05
+The Little Prince,Antoine de Saint-Exupéry,4.32,1943-04-06
+Cloud Atlas,David Mitchell,4.00,2004-03-17
+The Curious Incident of the Dog in the Night-Time,Mark Haddon,3.88,2003-05-01
+Angela's Ashes,Frank McCourt,4.12,1996-09-05
+The Secret Life of Bees,Sue Monk Kidd,4.07,2001-11-08
+The Shack,William P. Young,3.80,2007-07-01
+Outlander,Diana Gabaldon,4.24,1991-06-01
+Water for Elephants,Sara Gruen,4.08,2006-05-26
+The Perks of Being a Wallflower,Stephen Chbosky,4.21,1999-02-01
+The Memory Keeper's Daughter,Kim Edwards,3.74,2005-06-07
+The Girl with All the Gifts,M.R. Carey,4.08,2014-06-19
+The Light We Lost,Jill Santopolo,3.80,2017-05-09
+Circe,Madeline Miller,4.26,2018-04-10
+The Song of Achilles,Madeline Miller,4.37,2011-09-20
+The Guernsey Literary and Potato Peel Pie Society,Mary Ann Shaffer & Annie Barrows,4.17,2008-07-29
+The House of Mirth,Edith Wharton,4.00,1905-10-14
+We Were Liars,E. Lockhart,3.81,2014-05-13
+Me Before You,Jojo Moyes,4.26,2012-01-05
+The Night Watchman,Louise Erdrich,4.15,2020-03-03
+Before We Were Strangers,Renee Carlino,4.05,2015-08-18
+The Lightkeeper's Daughters,Jean E. Pendziwol,4.04,2017-07-04
+The Paris Library,Janet Skeslien Charles,4.01,2021-02-09
+The Clockmaker's Daughter,Kate Morton,3.72,2018-10-09
+Where'd You Go, Bernadette,Maria Semple,3.90,2012-08-14
+The Huntress,Kate Quinn,4.30,2019-02-26
+The Alice Network,Kate Quinn,4.27,2017-06-06
+The Immortal Life of Henrietta Lacks,Rebecca Skloot,4.07,2010-02-02
+Educated,Tara Westover,4.47,2018-02-20
+Becoming,Michelle Obama,4.55,2018-11-13
+Born a Crime,Trevor Noah,4.46,2016-11-15
+The Tattooist of Auschwitz,Heather Morris,4.29,2018-01-27
+Before We Were Yours,Lisa Wingate,4.33,2017-06-06
+Lilac Girls,Martha Hall Kelly,4.27,2016-04-05
+The Book Woman of Troublesome Creek,Kim Michele Richardson,4.29,2019-05-07
+The Dutch House,Ann Patchett,4.09,2019-09-24
+The Pillars of the Earth,Ken Follett,4.31,1989-01-01
+Unbroken,Laura Hillenbrand,4.38,2010-11-16
+Steve Jobs,Walter Isaacson,4.16,2011-10-24
+Into the Wild,Jon Krakauer,4.00,1996-01-13
+The Wright Brothers,David McCullough,4.16,2015-05-05
+The Devil in the White City,Erik Larson,4.00,2003-02-11
+Bossypants,Tina Fey,4.10,2011-04-05
+Yes Please,Amy Poehler,3.82,2014-10-28
+Wild,Cheryl Strayed,4.00,2012-03-20
+When Breath Becomes Air,Paul Kalanithi,4.36,2016-01-12
+Just Mercy,Bryan Stevenson,4.60,2014-10-21
+Sapiens,Yuval Noah Harari,4.40,2011-01-01
+Homo Deus,Yuval Noah Harari,4.35,2015-01-01
+Thinking, Fast and Slow,Daniel Kahneman,4.16,2011-10-25
+The Power of Habit,Charles Duhigg,4.13,2012-02-28
+Outliers,Malcolm Gladwell,4.16,2008-11-18
+Freakonomics,Steven D. Levitt & Stephen J. Dubner,4.17,2005-04-12
+Guns, Germs, and Steel,Jared Diamond,4.03,1997-03-01
+Quiet,Susan Cain,4.07,2012-01-24
+The 7 Habits of Highly Effective People,Stephen R. Covey,4.13,1989-08-15
+The Subtle Art of Not Giving a F*ck,Mark Manson,3.91,2016-09-13
+How to Win Friends and Influence People,Dale Carnegie,4.21,1936-10-01
+The Life-Changing Magic of Tidying Up,Marie Kond?,3.88,2010-01-01
+The Four Agreements,Don Miguel Ruiz,4.18,1997-11-07
+Man's Search for Meaning,Viktor E. Frankl,4.35,1946-01-01
+The Diary of a Young Girl,Anne Frank,4.16,1947-06-25
+Night,Elie Wiesel,4.36,1956-01-01
+The Glass Castle,Jeannette Walls,4.29,2005-03-09
+Eat, Pray, Love,Elizabeth Gilbert,3.60,2006-02-16
+Trouble's just begun, Roy Stobbe, 2,0,2021-08-15
+The Midnight Garden,Amelia Collins,4.2,2018-07-12
+Echoes of Eternity,Jonathan Carter,4.5,2019-03-28
+Whispers in the Wind,Samantha Reyes,4.0,2020-09-15
+The Forgotten Key,Michael Anderson,4.3,2017-11-02
+Shadows of Destiny,Emily Thompson,4.1,2016-05-20
+The Emerald Isle,Liam O'Brien,4.6,2015-02-10
+Dreams of Tomorrow,Isabella Garcia,4.4,2014-08-30
+The Last Voyage,Oliver Parker,4.3,2013-10-18
+Echoes from the Past,Charlotte Evans,4.2,2012-12-05
+Whispers of the Heart,Natalie Scott,4.5,2011-09-21
+The Secret Garden,Emma Wilson,4.7,2010-06-14
+The Alchemist's Apprentice,Daniel Cooper,4.4,2009-04-03
+Lost in Time,Sophia Martinez,4.3,2008-01-22
+Echoes of the Soul,David Harris,4.5,2007-07-11
+Shadows of the Forest,Ava Roberts,4.2,2006-04-30
+The Enchanted Mirror,James Sullivan,4.6,2005-02-19
+Dreams of Avalon,Ella White,4.1,2004-09-05
+The Last Enchantment,Nathan Johnson,4.3,2003-11-27
+Echoes of Magic,Grace Lee,4.4,2002-12-14
+Whispers in the Dark,Noah King,4.0,2001-08-10
+The Forgotten Prophecy,Lily Adams,4.2,2000-05-01
+Shadows of Illusion,Sophie Taylor,4.5,1999-02-18
+The Crystal Key,Matthew Brown,4.1,1998-06-30
+Dreams of Destiny,Aiden Perez,4.3,1997-09-25
+The Lost City,Chloe Campbell,4.6,1996-11-12
+Echoes of Hope,Ethan Hughes,4.2,1995-04-28
+Whispers of Wisdom,Hailey Rivera,4.4,1994-02-15
+The Secret Scroll,Jack Mitchell,4.5,1993-07-09
+The Alchemist's Secret,Samantha Hall,4.1,1992-09-30
+Lost Horizon,Logan Nelson,4.3,1991-12-22
+Echoes of Legends,Audrey Foster,4.2,1990-08-11
+Shadows of Betrayal,Avery Murphy,4.4,1989-05-05
+The Enchanted Forest,Aiden Walker,4.6,1988-03-20
+Dreams of Serenity,Sophia Collins,4.3,1987-01-15
+The Last Stand,Liam Rivera,4.5,1986-10-02
+Echoes of Courage,Grace Perez,4.2,1985-06-19
+Whispers of Fate,Isaac Cook,4.4,1984-04-08
+The Forgotten Kingdom,Scarlett Morgan,4.1,1983-11-30
+Shadows of Redemption,Michael Kelly,4.3,1982-09-20
+The Crystal Palace,Olivia Bailey,4.6,1981-07-15
+Dreams of Freedom,Lucas Gonzales,4.2,1980-04-05
+The Lost Princess,Sarah Phillips,4.5,1979-02-28
+Echoes of Exile,Ella Reed,4.4,1978-09-15
+Whispers of Wonder,Nathan Howard,4.3,1977-05-10
+The Secret Chamber,Grace Martinez,4.1,1976-02-03
+The Alchemist's Daughter,Isabella Wood,4.7,1975-10-20
+Lost Souls,Jacob Bennett,4.2,1974-07-11
+Echoes of Revolution,Lily Ward,4.5,1973-04-01
+Shadows of Chaos,Noah Cooper,4.6,1972-01-25
+The Enchanted Ring,Emily Richardson,4.3,1971-08-12
+Dreams of Glory,Logan Turner,4.4,1970-05-05
+The Last Frontier,Hannah Green,4.2,1969-03-22
+Echoes of Tomorrow,Lucas Torres,4.1,1968-11-15
+Whispers of the Stars,Ava Morgan,4.5,1967-09-07
+The Forgotten Forest,Natalie Mitchell,4.3,1966-06-30
+Shadows of Despair,Jackie Diaz,4.2,1965-04-20
+The Crystal Cavern,David Carter,4.6,1964-02-10
+Dreams of the Wild,Aiden Brooks,4.4,1963-08-05
+The Lost World,Sophie Wood,4.1,1962-12-31
+Echoes of Creation,Ethan Reed,4.3,1961-10-22
+Whispers in the Wilderness,Olivia Stewart,4.5,1960-07-15
+The Secret Society,Charlotte Adams,4.2,1959-05-01
+The Alchemist's Apprentice,Isaac White,4.7,1958-02-18
+Lost and Found,Liam Hernandez,4.4,1957-09-10
+Echoes of Revolution,Grace Bailey,4.3,1956-04-28
+Shadows of Destiny,Emily Parker,4.6,1955-02-15
+The Enchanted Isles,David Foster,4.1,1954-08-10
+Dreams of Tomorrow,Sophia Kelly,4.3,1953-06-01
+The Last Voyage,Noah Thompson,4.2,1952-02-20
+Whispers from the Past,Ava Davis,4.5,1951-11-15
+The Forgotten Key,Jack Evans,4.7,1950-09-05
+Echoes of Serenity,Samantha Wilson,4.2,2018-07-12
+Whispers of Destiny,Nathan Carter,4.5,2019-03-28
+The Forgotten Forest,Olivia Thompson,4.0,2020-09-15
+Shadows of Solitude,Jackie Rodriguez,4.3,2017-11-02
+The Enchanted Garden,Lucas Ramirez,4.1,2016-05-20
+Dreams of Adventure,Chloe Foster,4.6,2015-02-10
+The Last Guardian,Ethan Miller,4.4,2014-08-30
+Echoes of the Sea,Grace Stewart,4.3,2013-10-18
+Whispers in the Mist,Isaac Harris,4.2,2012-12-05
+The Secret Sanctuary,Ava King,4.5,2011-09-21
+The Alchemist's Secret,Logan Mitchell,4.7,2010-06-14
+Lost in Wonderland,Sophia Turner,4.4,2009-04-03
+Echoes of the Unknown,Oliver Carter,4.3,2008-01-22
+Shadows of the Night,Emily Wood,4.5,2007-07-11
+The Enchanted Castle,Noah Richardson,4.2,2006-04-30
+Dreams of Peril,Charlotte Brooks,4.6,2005-02-19
+The Last Refuge,David Lopez,4.1,2004-09-05
+Echoes of the Sky,Sophie Bailey,4.3,2003-11-27
+Whispers of the Moon,Michael Stewart,4.4,2002-12-14
+The Forgotten City,Isabella Cooper,4.0,2001-08-10
+Shadows of the Past,Liam Kelly,4.2,2000-05-01
+The Crystal Lake,Ella Davis,4.5,1999-02-18
+Dreams of Mystery,Nathan Hernandez,4.1,1998-06-30
+The Last Dragon,Aiden Parker,4.3,1997-09-25
+Echoes of the Wind,Sophia Adams,4.6,1996-11-12
+Whispers of the Heart,Lucas Thompson,4.2,1995-04-28
+The Secret Garden,Emma Wilson,4.7,1994-02-15
+The Alchemist's Apprentice,Isaac Harris,4.4,1993-07-09
+Lost Horizon,Olivia Murphy,4.3,1992-09-30
+Echoes of Legends,Jackie Scott,4.2,1991-12-22
+Shadows of Betrayal,Noah Evans,4.4,1990-08-11
+The Enchanted Forest,Ava Martinez,4.6,1989-05-05
+Dreams of Serenity,Liam Turner,4.3,1988-03-20
+The Last Stand,Sophia Perez,4.5,1987-01-15
+Echoes of Courage,Charlotte Flores,4.2,1986-10-02
+Whispers of Fate,David Brooks,4.4,1985-06-19
+The Forgotten Kingdom,Olivia Carter,4.1,1984-04-08
+Shadows of Redemption,Logan Hughes,4.3,1983-11-30
+The Crystal Palace,Emma Nelson,4.6,1982-09-20
+Dreams of Freedom,Isaac Reed,4.2,1981-07-15
+The Lost Princess,Sophia Foster,4.5,1980-04-05
+Echoes of Exile,Nathan Gray,4.4,1979-02-28
+Whispers of Wonder,Liam Bailey,4.3,1978-09-15
+The Secret Chamber,Olivia Lopez,4.1,1977-05-10
+The Alchemist's Daughter,Ava Rivera,4.7,1976-02-03
+Lost Souls,Jackie Ward,4.2,1975-10-20
+Echoes of Revolution,David Stewart,4.5,1974-07-11
+Shadows of Chaos,Emma Adams,4.6,1973-04-01
+The Enchanted Ring,Liam Murphy,4.3,1972-01-25
+Dreams of Glory,Sophia Foster,4.4,1971-08-12
+The Last Frontier,Charlotte Thompson,4.2,1970-05-05
+Echoes of Tomorrow,Noah Kelly,4.1,1969-03-22
+Whispers of the Stars,Olivia Hernandez,4.5,1968-11-15
+The Forgotten Forest,Nathan Brooks,4.3,1967-09-07
+Shadows of Despair,Liam Gray,4.2,1966-06-30
+The Crystal Cavern,Emma Adams,4.6,1965-04-20
+Dreams of the Wild,Ava Stewart,4.4,1964-02-10
+The Lost World,Jackie Turner,4.1,1963-08-05
+Echoes of Creation,David Foster,4.3,1962-12-31
+Whispers in the Wilderness,Sophia Gray,4.5,1961-10-22
+The Secret Society,Olivia Kelly,4.2,1960-07-15
+The Alchemist's Apprentice,Liam Murphy,4.7,1959-05-01
+Lost and Found,Emma Thompson,4.4,1958-02-18
+Echoes of Revolution,Noah Stewart,4.3,1957-09-10
+Shadows of Destiny,Liam Adams,4.6,1956-04-28
+The Enchanted Isles,Olivia Martinez,4.1,1955-02-15
+Dreams of Tomorrow,Sophia Turner,4.3,1954-08-10
+The Last Voyage,David Brooks,4.2,1953-06-01
+Whispers from the Past,Ava Hernandez,4.5,1952-02-20
+The Forgotten Key,Jackie Gray,4.7,1951-11-15
+Carrie,Stephen King,4.0,1974-04-05
+'Salem's Lot,Stephen King,4.1,1975-10-17
+The Shining,Stephen King,4.2,1977-01-28
+Rage,Stephen King,3.7,1977-09-13
+The Stand,Stephen King,4.5,1978-10-03
+The Long Walk,Stephen King,4.0,1979-07-01
+The Dead Zone,Stephen King,4.1,1979-08-30
+Firestarter,Stephen King,4.0,1980-09-29
+Cujo,Stephen King,3.8,1981-09-08
+The Running Man,Stephen King,4.0,1982-05-05
+The Dark Tower: The Gunslinger,Stephen King,4.2,1982-06-10
+Christine,Stephen King,3.9,1983-04-29
+Pet Sematary,Stephen King,4.2,1983-11-14
+Cycle of the Werewolf,Stephen King,3.7,1983-11-01
+The Talisman,Stephen King & Peter Straub,4.2,1984-11-08
+Thinner,Stephen King (writing as Richard Bachman),3.8,1984-11-19
+It,Stephen King,4.3,1986-09-15
+The Eyes of the Dragon,Stephen King,4.0,1987-02-02
+Misery,Stephen King,4.2,1987-06-08
+The Tommyknockers,Stephen King,3.7,1987-11-10
+The Dark Half,Stephen King,3.9,1989-10-20
+The Stand: The Complete & Uncut Edition,Stephen King,4.6,1990-05-01
+Needful Things,Stephen King,4.1,1991-10-01
+Gerald's Game,Stephen King,3.8,1992-05-01
+Dolores Claiborne,Stephen King,4.1,1992-11-03
+Insomnia,Stephen King,4.0,1994-09-15
+Rose Madder,Stephen King,3.8,1995-06-06
+The Green Mile,Stephen King,4.4,1996-03-28
+Desperation,Stephen King,3.8,1996-09-24
+The Regulators,Stephen King (writing as Richard Bachman),3.7,1996-09-24
+The Dark Tower IV: Wizard and Glass,Stephen King,4.2,1997-11-04
+Bag of Bones,Stephen King,4.0,1998-09-22
+The Girl Who Loved Tom Gordon,Stephen King,3.7,1999-04-06
+Hearts in Atlantis,Stephen King,4.0,1999-09-14
+Storm of the Century,Stephen King,4.1,1999-11-01
+The Dark Tower V: Wolves of the Calla,Stephen King,4.2,2003-11-04
+The Dark Tower VI: Song of Susannah,Stephen King,4.1,2004-06-08
+The Dark Tower VII: The Dark Tower,Stephen King,4.3,2004-09-21
+The Colorado Kid,Stephen King,3.6,2005-10-04
+Cell,Stephen King,3.7,2006-01-24
+Lisey's Story,Stephen King,3.8,2006-10-24
+Blaze,Stephen King (writing as Richard Bachman),3.5,2007-06-12
+Duma Key,Stephen King,4.0,2008-01-22
+Under the Dome,Stephen King,4.0,2009-11-10
+11/22/63,Stephen King,4.3,2011-11-08
+The Dark Tower: The Wind Through the Keyhole,Stephen King,4.1,2012-04-24
+Joyland,Stephen King,3.8,2013-06-04
+Doctor Sleep,Stephen King,4.1,2013-09-24
+Mr. Mercedes,Stephen King,4.0,2014-06-03
+Revival,Stephen King,4.0,2014-11-11
+Finders Keepers,Stephen King,4.0,2015-06-02
+End of Watch,Stephen King,4.1,2016-06-07
+Gwendy's Button Box,Stephen King & Richard Chizmar,3.9,2017-05-16
+Sleeping Beauties,Stephen King & Owen King,3.8,2017-09-26
+The Outsider,Stephen King,4.1,2018-05-22
+Elevation,Stephen King,3.7,2018-10-30
+The Institute,Stephen King,4.2,2019-09-10
+If It Bleeds,Stephen King,4.1,2020-04-21
+Later,Stephen King,4.0,2021-03-02
+Billy Summers,Stephen King,4.3,2021-08-03
+The Hobbit,J.R.R. Tolkien,4.2,1937-09-21
+The Lord of the Rings: The Fellowship of the Ring,J.R.R. Tolkien,4.5,1954-07-29
+The Lord of the Rings: The Two Towers,J.R.R. Tolkien,4.6,1954-11-11
+The Lord of the Rings: The Return of the King,J.R.R. Tolkien,4.7,1955-10-20
+The Silmarillion,J.R.R. Tolkien,4.0,1977-09-15
+The Children of Húrin,J.R.R. Tolkien,4.1,2007-04-17
+The Fall of Gondolin,J.R.R. Tolkien,4.3,2018-08-30
+The History of Middle-earth (series),J.R.R. Tolkien & Christopher Tolkien,4.4,1983-1996
+James and the Giant Peach,Roald Dahl,4.2,1961-07-26
+Charlie and the Chocolate Factory,Roald Dahl,4.3,1964-10-01
+The Magic Finger,Roald Dahl,4.0,1966-01-01
+Fantastic Mr. Fox,Roald Dahl,4.1,1970-10-14
+Charlie and the Great Glass Elevator,Roald Dahl,4.0,1972-01-01
+Danny, the Champion of the World,Roald Dahl,4.1,1975-01-01
+The Enormous Crocodile,Roald Dahl,4.0,1978-01-01
+The Twits,Roald Dahl,4.2,1980-01-01
+George's Marvellous Medicine,Roald Dahl,4.1,1981-01-01
+The BFG,Roald Dahl,4.2,1982-01-01
+The Witches,Roald Dahl,4.3,1983-01-01
+The Giraffe and the Pelly and Me,Roald Dahl,4.0,1985-01-01
+Matilda,Roald Dahl,4.4,1988-01-01
+Esio Trot,Roald Dahl,4.1,1990-01-01
+The Vicar of Nibbleswicke,Roald Dahl,4.0,1991-01-01
+The Minpins,Roald Dahl,4.1,1991-01-01
+The Wonderful Story of Henry Sugar and Six More,Roald Dahl,4.1,1991-01-01
+The BFG (Film Tie-in Edition),Roald Dahl,4.2,2016-06-16
+And to Think That I Saw It on Mulberry Street,Dr. Seuss,4.0,1937-01-01
+The 500 Hats of Bartholomew Cubbins,Dr. Seuss,4.1,1938-01-01
+The King's Stilts,Dr. Seuss,4.0,1939-01-01
+Horton Hatches the Egg,Dr. Seuss,4.2,1940-01-01
+McElligot's Pool,Dr. Seuss,4.1,1947-01-01
+Thidwick the Big-Hearted Moose,Dr. Seuss,4.1,1948-01-01
+Bartholomew and the Oobleck,Dr. Seuss,4.2,1949-01-01
+If I Ran the Zoo,Dr. Seuss,4.1,1950-01-01
+Scrambled Eggs Super!,Dr. Seuss,4.0,1953-01-01
+Horton Hears a Who!,Dr. Seuss,4.3,1954-01-01
+On Beyond Zebra!,Dr. Seuss,4.1,1955-01-01
+If I Ran the Circus,Dr. Seuss,4.1,1956-01-01
+The Cat in the Hat,Dr. Seuss,4.4,1957-01-01
+How the Grinch Stole Christmas!,Dr. Seuss,4.6,1957-01-01
+Yertle the Turtle and Other Stories,Dr. Seuss,4.3,1958-01-01
+The Cat in the Hat Comes Back,Dr. Seuss,4.2,1958-01-01
+Happy Birthday to You!,Dr. Seuss,4.1,1959-01-01
+Green Eggs and Ham,Dr. Seuss,4.5,1960-01-01
+One Fish Two Fish Red Fish Blue Fish,Dr. Seuss,4.3,1960-01-01
+The Sneetches and Other Stories,Dr. Seuss,4.4,1961-01-01
+Dr. Seuss's Sleep Book,Dr. Seuss,4.2,1962-01-01
+Dr. Seuss's ABC,Dr. Seuss,4.3,1963-01-01
+Hop on Pop,Dr. Seuss,4.1,1963-01-01
+Fox in Socks,Dr. Seuss,4.1,1965-01-01
+I Had Trouble in Getting to Solla Sollew,Dr. Seuss,4.2,1965-01-01
+The Cat in the Hat Songbook,Dr. Seuss,4.1,1967-01-01
+The Foot Book,Dr. Seuss,4.0,1968-01-01
+I Can Lick 30 Tigers Today! and Other Stories,Dr. Seuss,4.0,1969-01-01
+My Book about ME,Dr. Seuss,4.0,1969-01-01
+I Can Draw It Myself,Dr. Seuss,4.0,1970-01-01
+Mr. Brown Can Moo! Can You?,Dr. Seuss,4.0,1970-01-01
+The Lorax,Dr. Seuss,4.4,1971-01-01
+Marvin K. Mooney Will You Please Go Now!,Dr. Seuss,4.0,1972-01-01
+Did I Ever Tell You How Lucky You Are?,Dr. Seuss,4.2,1973-01-01
+The Shape of Me and Other Stuff,Dr. Seuss,4.1,1973-01-01
+There's a Wocket in My Pocket!,Dr. Seuss,4.1,1974-01-01
+Great Day for Up!,Dr. Seuss,4.0,1974-01-01
+Oh, the Thinks You Can Think!,Dr. Seuss,4.1,1975-01-01
+The Cat's Quizzer,Dr. Seuss,4.0,1976-01-01
+I Can Read with My Eyes Shut!,Dr. Seuss,4.0,1978-01-01
+Oh Say Can You Say?,Dr. Seuss,4.0,1979-01-01
+Hunches in Bunches,Dr. Seuss,4.1,1982-01-01
+The Butter Battle Book,Dr. Seuss,4.2,1984-01-01
+You're Only Old Once!,Dr. Seuss,4.0,1986-01-01
+I Am Not Going to Get Up Today!,Dr. Seuss,4.0,1987-01-01
+Oh, the Places You'll Go!,Dr. Seuss,4.5,1990
+Digital Fortress,Dan Brown,3.8,1998-04-09
+Angels & Demons,Dan Brown,4.0,2000-05-01
+Deception Point,Dan Brown,3.8,2001-11-01
+The Da Vinci Code,Dan Brown,4.0,2003-03-18
+The Lost Symbol,Dan Brown,3.7,2009-09-15
+Inferno,Dan Brown,3.9,2013-05-14
+Origin,Dan Brown,3.9,2017-10-03
+Wild Symphony,Dan Brown,4.3,2020-09-01
+Relativity: The Special and the General Theory,Albert Einstein,4.2,1916-01-01
+The Meaning of Relativity,Albert Einstein,4.1,1922-01-01
+The Evolution of Physics,Albert Einstein & Leopold Infeld,4.0,1938-01-01
+Out of My Later Years,Albert Einstein,4.0,1950-01-01
+The World As I See It,Albert Einstein,4.3,1954-01-01
+Harry Potter and the Philosopher's Stone,J.K. Rowling,4.5,1997-06-26
+Harry Potter and the Chamber of Secrets,J.K. Rowling,4.4,1998-07-02
+Harry Potter and the Prisoner of Azkaban,J.K. Rowling,4.6,1999-07-08
+Harry Potter and the Goblet of Fire,J.K. Rowling,4.7,2000-07-08
+Harry Potter and the Order of the Phoenix,J.K. Rowling,4.8,2003-06-21
+Harry Potter and the Half-Blood Prince,J.K. Rowling,4.7,2005-07-16
+Harry Potter and the Deathly Hallows,J.K. Rowling,4.8,2007-07-21
+The Tales of Beedle the Bard,J.K. Rowling,4.3,2008-12-04
+Fantastic Beasts and Where to Find Them,J.K. Rowling,4.1,2001-03-01
+Quidditch Through the Ages,J.K. Rowling,4.0,2001-03-01
+Casino Royale,Ian Fleming,4.1,1953-04-13
+Live and Let Die,Ian Fleming,4.0,1954-04-05
+Moonraker,Ian Fleming,4.0,1955-04-05
+Diamonds Are Forever,Ian Fleming,3.9,1956-03-26
+From Russia, with Love,Ian Fleming,4.0,1957-04-08
+Dr. No,Ian Fleming,4.0,1958-03-31
+Goldfinger,Ian Fleming,4.0,1959-03-23
+For Your Eyes Only,Ian Fleming,4.0,1960-04-11
+Thunderball,Ian Fleming,4.0,1961-03-27
+The Spy Who Loved Me,Ian Fleming,3.8,1962-04-16
+On Her Majesty's Secret Service,Ian Fleming,4.0,1963-04-01
+You Only Live Twice,Ian Fleming,4.0,1964-03-16
+The Man with the Golden Gun,Ian Fleming,3.9,1965-04-01
+Octopussy and The Living Daylights,Ian Fleming,3.8,1966-06-23
+A Study in Scarlet,Sir Arthur Conan Doyle,4.1,1887-11-01
+The Sign of the Four,Sir Arthur Conan Doyle,4.0,1890-02-27
+The Adventures of Sherlock Holmes,Sir Arthur Conan Doyle,4.4,1892-10-14
+The Memoirs of Sherlock Holmes,Sir Arthur Conan Doyle,4.3,1893-12-14
+The Hound of the Baskervilles,Sir Arthur Conan Doyle,4.5,1902-03-14
+The Return of Sherlock Holmes,Sir Arthur Conan Doyle,4.4,1905-03-07
+His Last Bow,Sir Arthur Conan Doyle,4.3,1917-09-22
+The Case-Book of Sherlock Holmes,Sir Arthur Conan Doyle,4.2,1927-06-16
+Twilight,Stephenie Meyer,3.9,2005-10-05
+New Moon,Stephenie Meyer,4.0,2006-09-06
+Eclipse,Stephenie Meyer,4.0,2007-08-07
+Breaking Dawn,Stephenie Meyer,3.9,2008-08-02
+The Host,Stephenie Meyer,4.1,2008-05-06
+Midnight Sun,Stephenie Meyer,4.2,2020-08-04
+Fifty Shades of Grey,E.L. James,3.5,2011-06-20
+Fifty Shades Darker,E.L. James,3.6,2011-09-13
+Fifty Shades Freed,E.L. James,3.7,2012-01-17
+Grey: Fifty Shades of Grey as Told by Christian,E.L. James,3.8,2015-06-18
+Darker: Fifty Shades Darker as Told by Christian,E.L. James,3.9,2017-11-28
+The Mister,E.L. James,3.4,2019-04-16
+The Hunger Games,Suzanne Collins,4.3,2008-09-14
+Catching Fire,Suzanne Collins,4.4,2009-09-01
+Mockingjay,Suzanne Collins,4.3,2010-08-24
+The Ballad of Songbirds and Snakes,Suzanne Collins,4.0,2020-05-19
+Watchmen,Alan Moore & Dave Gibbons,4.5,1986-09-01
+The Dark Knight Returns,Frank Miller,4.4,1986-02-01
+Sandman,Neil Gaiman,4.6,1989-01-01
+Saga,Brian K. Vaughan & Fiona Staples,4.7,2012-03-14
+Ms. Marvel,G. Willow Wilson,4.3,2014-02-05
+Black Panther,Ta-Nehisi Coates,4.2,2016-04-06
+Spider-Man: Blue,Jeph Loeb & Tim Sale,4.2,2002-07-10
+The Celebrated Jumping Frog of Calaveras County,Mark Twain,1865-11-18
+The Innocents Abroad,Mark Twain,1869-07-20
+Roughing It,Mark Twain,1872-02-01
+The Adventures of Tom Sawyer,Mark Twain,1876-12-10
+The Prince and the Pauper,Mark Twain,1881-12-17
+Life on the Mississippi,Mark Twain,1883-11-01
+Adventures of Huckleberry Finn,Mark Twain,1884-12-10
+A Connecticut Yankee in King Arthur's Court,Mark Twain,1889-12-18
+The Tragedy of Pudd'nhead Wilson,Mark Twain,1894-11-28
+Personal Recollections of Joan of Arc,Mark Twain,1896-12-01
+The Mysterious Stranger,Mark Twain,1916-04-15
+Sense and Sensibility,Jane Austen,1811-10-30
+Pride and Prejudice,Jane Austen,1813-01-28
+Mansfield Park,Jane Austen,1814-05-09
+Emma,Jane Austen,1815-12-23
+Northanger Abbey,Jane Austen,1817-12-01
+Persuasion,Jane Austen,1817-12-27
+Three Stories and Ten Poems,Ernest Hemingway,1923-10-01
+In Our Time,Ernest Hemingway,1925-10-05
+The Torrents of Spring,Ernest Hemingway,1926-04-28
+The Sun Also Rises,Ernest Hemingway,1926-10-22
+Men Without Women,Ernest Hemingway,1927-10-19
+A Farewell to Arms,Ernest Hemingway,1929-09-27
+Death in the Afternoon,Ernest Hemingway,1932-09-09
+Winner Take Nothing,Ernest Hemingway,1933-10-10
+Green Hills of Africa,Ernest Hemingway,1935-10-23
+To Have and Have Not,Ernest Hemingway,1937-10-11
+For Whom the Bell Tolls,Ernest Hemingway,1940-10-21
+Across the River and Into the Trees,Ernest Hemingway,1950-09-07
+The Old Man and the Sea,Ernest Hemingway,1952-09-01
+A Song for Lya,George R.R. Martin,1974-06-00
+Dying of the Light,George R.R. Martin,1977-11-00
+The Ice Dragon,George R.R. Martin,1980-12-00
+Windhaven,George R.R. Martin & Lisa Tuttle,1981-00-00
+Fevre Dream,George R.R. Martin,1982-04-00
+The Armageddon Rag,George R.R. Martin,1983-02-00
+Tuf Voyaging,George R.R. Martin,1986-02-00
+Portraits of His Children,George R.R. Martin,1987-00-00
+Nightflyers,George R.R. Martin,1985-04-00
+The Skin Trade,George R.R. Martin,1988-11-00
+A Game of Thrones,George R.R. Martin,1996-08-06
+A Clash of Kings,George R.R. Martin,1998-11-16
+A Storm of Swords,George R.R. Martin,2000-10-31
+A Feast for Crows,George R.R. Martin,2005-10-17
+A Dance with Dragons,George R.R. Martin,2011-07-12
+The Princess and the Queen,George R.R. Martin,2013-12-03
+The Rogue Prince,George R.R. Martin,2014-06-17
+The World of Ice & Fire,George R.R. Martin,2014-10-28
+A Knight of the Seven Kingdoms,George R.R. Martin,2015-10-06
+Fire & Blood,George R.R. Martin,2018-11-20
+Blind Date,R.L. Stine,3.7,1986-08-01
+Twisted,R.L. Stine,3.6,1989-06-01
+Beach House,R.L. Stine,3.5,1989-11-01
+The Babysitter,R.L. Stine,3.7,1989-12-01
+Hit and Run,R.L. Stine,3.5,1990-06-01
+The Girlfriend,R.L. Stine,3.6,1990-09-01
+The Boyfriend,R.L. Stine,3.6,1990-11-01
+The Hitchhiker,R.L. Stine,3.5,1991-05-01
+The Snowman,R.L. Stine,3.7,1991-11-01
+The Beach Party,R.L. Stine,3.6,1991-12-01
+The Babysitter II,R.L. Stine,3.6,1991-12-01
+The Girlfriend II,R.L. Stine,3.6,1992-05-01
+The Boyfriend II,R.L. Stine,3.6,1992-08-01
+The Cheater,R.L. Stine,3.7,1993-06-01
+The Cheater II,R.L. Stine,3.5,1993-08-01
+I Saw You That Night,R.L. Stine,3.5,1993-12-01
+The New Boy,R.L. Stine,3.6,1994-05-01
+The Dare,R.L. Stine,3.6,1994-07-01
+Halloween Night,R.L. Stine,3.6,1994-10-01
+Halloween Party,R.L. Stine,3.7,1995-02-01
+The Stepsister,R.L. Stine,3.6,1995-03-01
+Broken Hearts,R.L. Stine,3.6,1995-08-01
+Goodnight Kiss,R.L. Stine,3.7,1995-09-01
+The Thrill Club,R.L. Stine,3.6,1995-10-01
+The Confession,R.L. Stine,3.6,1995-12-01
+Secret Admirer,R.L. Stine,3.6,1996-01-01
+The Boy Next Door,R.L. Stine,3.6,1996-02-01
+The Perfect Date,R.L. Stine,3.6,1996-03-01
+The Confession II,R.L. Stine,3.6,1996-04-01
+The Perfect Date II,R.L. Stine,3.6,1996-05-01
+The Boy Next Door II,R.L. Stine,3.6,1996-06-01
+The Stepsister II,R.L. Stine,3.6,1996-07-01
+The Thrill Club II,R.L. Stine,3.6,1996-08-01
+The Confession III,R.L. Stine,3.6,1996-09-01
+The Perfect Date III,R.L. Stine,3.6,1996-10-01
+The Boy Next Door III,R.L. Stine,3.6,1996-11-01
+The Stepsister III,R.L. Stine,3.6,1996-12-01
+The Thrill Club III,R.L. Stine,3.6,1997-01-01
+The Confession IV,R.L. Stine,3.6,1997-02-01
+The Perfect Date IV,R.L. Stine,3.6,1997-03-01
+The Boy Next Door IV,R.L. Stine,3.6,1997-04-01
+The Stepsister IV,R.L. Stine,3.6,1997-05-01
+The Thrill Club IV,R.L. Stine,3.6,1997-06-01
+The Confession V,R.L. Stine,3.6,1997-07-01
+The Perfect Date V,R.L. Stine,3.6,1997-08-01
+The Boy Next Door V,R.L. Stine,3.6,1997-09-01
+The Stepsister V,R.L. Stine,3.6,1997-10-01
+The Thrill Club V,R.L. Stine,3.6,1997-11-01
+The Confession VI,R.L. Stine,3.6,1997-12-01
+The Perfect Date VI,R.L. Stine,3.6,1998-01-01
+The Boy Next Door VI,R.L. Stine,3.6,1998-02-01
+The Stepsister VI,R.L. Stine,3.6,1998-03-01
+The Thrill Club VI,R.L. Stine,3.6,1998-04-01
