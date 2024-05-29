@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Datastructures and algorithmes/lib/intellij_forms_rt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Datastructures and algorithmes/lib/intellij_forms_rt_src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
