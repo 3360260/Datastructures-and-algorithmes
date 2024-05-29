@@ -2,7 +2,6 @@ import DataStructures.DataStructure;
 import DataStructures.LinkedListDS;
 import DataStructures.ArrayListDS;
 import DataStructures.TreeMapDS;
-
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
@@ -31,8 +30,8 @@ public class FrontEndGUI extends JFrame implements ActionListener {
     private JRadioButton treeMapRadioButton;
     private ButtonGroup dataStructureGroup;
     private ButtonGroup algorithmGroup;
-    private long startTime;
     private String currentDataStructure;
+    private long startTime;
 
     public FrontEndGUI() {
         setTitle("Algorithms Duration GUI");
@@ -88,6 +87,7 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         setVisible(true);
 
         dataStructure = new LinkedListDS<>();
+        currentDataStructure = "LinkedList";
 
         checkAndLoadCSVFile();
     }
@@ -100,8 +100,12 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(titleLabel);
 
-        dataStructureGroup = new ButtonGroup();
-        algorithmGroup = new ButtonGroup();
+        if (title.equals("Select Data Structure")) {
+            dataStructureGroup = new ButtonGroup();
+        } else if (title.equals("Select Algorithm")) {
+            algorithmGroup = new ButtonGroup();
+        }
+
         for (String option : options) {
             JRadioButton radioButton = new JRadioButton(option);
             radioButton.setActionCommand(option);
@@ -217,123 +221,61 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         }
     }
 
-    private void printDataStructureType() {
-        if (dataStructure instanceof LinkedListDS) {
-            outputArea.append("Data structure is now a LinkedList.\n");
-        } else if (dataStructure instanceof ArrayListDS) {
-            outputArea.append("Data structure is now an ArrayList.\n");
-        } else if (dataStructure instanceof TreeMapDS) {
-            outputArea.append("Data structure is now a TreeMap.\n");
+
+    private void runSelectedAlgorithm() {
+        if (algorithmGroup.getSelection() != null) {
+            String selectedAlgorithm = algorithmGroup.getSelection().getActionCommand();
+
+            executeSelectedAlgorithm(selectedAlgorithm);
+
         } else {
-            outputArea.append("Data structure is of unknown type.\n");
+            outputArea.append("Please select an algorithm.\n");
         }
     }
 
-
-    private void runDataStructure() {
-        if (dataStructureGroup.getSelection() != null) {
-            String selectedDataStructure = dataStructureGroup.getSelection().getActionCommand();
-
-            startTime = System.currentTimeMillis();
-
-            switch (selectedDataStructure) {
-                case "LinkedList":
-                    dataStructure = new LinkedListDS<>();
-                    outputArea.append("Switched from data structure: " + dataStructure.getClass().getSimpleName() + " to LinkedList.\n");
-                    break;
-                case "ArrayList":
-                    dataStructure = new ArrayListDS<>();
-                    outputArea.append("Switched from data structure: " + dataStructure.getClass().getSimpleName() + " to ArrayList.\n");
-                    break;
-                case "TreeMap":
-                    dataStructure = new TreeMapDS<>();
-                    outputArea.append("Switched from data structure: " + dataStructure.getClass().getSimpleName() + " to TreeMap.\n");
-                    break;
-                default:
-                    outputArea.append("Unknown data structure selected.\n");
-            }
-            long endTime = System.currentTimeMillis(); // End time
-            long elapsedTime = endTime - startTime; // Elapsed time in milliseconds
-
-            // Calculate minutes, seconds, and milliseconds
-            long minutes = (elapsedTime / 1000) / 60;
-            long seconds = (elapsedTime / 1000) % 60;
-            long milliseconds = elapsedTime % 1000;
-
-            // Display pop-up window with elapsed time
-            String message = String.format("Switched data from data structure %s to data structure %s. Time elapsed: %d:%02d:%03d",
-                    currentDataStructure, selectedDataStructure, minutes, seconds, milliseconds);
-            JOptionPane.showMessageDialog(this, message, "Data Structure Switch", JOptionPane.INFORMATION_MESSAGE);
-
-            // Update current data structure
-            currentDataStructure = selectedDataStructure;
-
-            // Print the type of data structure
-            printDataStructureType();
-        } else {
-            outputArea.append("Please select a data structure.\n");
+    private void executeSelectedAlgorithm(String selectedAlgorithm) {
+        switch (selectedAlgorithm) {
+            case "Sort by title":
+                sortBooksByTitle();
+                break;
+            case "Sort by natural order":
+                sortBooksByNaturalOrder();
+                break;
+            case "Search book by title":
+                searchBookByTitle();
+                break;
+            case "Search books by author":
+                searchBooksByAuthor();
+                break;
+            default:
+                outputArea.append("Unknown algorithm selected.\n");
         }
     }
 
-        private void runSelectedAlgorithm() {
-            if (algorithmGroup.getSelection() != null) {
-                String selectedAlgorithm = algorithmGroup.getSelection().getActionCommand();
+    private void showElapsedTime(long elapsedTime) {
+        long minutes = (elapsedTime / 1000) / 60;
+        long seconds = (elapsedTime / 1000) % 60;
+        long milliseconds = elapsedTime % 1000;
 
-                startTime = System.currentTimeMillis();
+        JOptionPane.showMessageDialog(this,
+                "Time elapsed: " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds",
+                "Time Elapsed",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
 
-                executeSelectedAlgorithm(selectedAlgorithm);
-
-                long elapsedTime = System.currentTimeMillis() - startTime;
-            } else {
-                outputArea.append("Please select an algorithm.\n");
-            }
-        }
-
-        private void executeSelectedAlgorithm(String selectedAlgorithm) {
-            switch (selectedAlgorithm) {
-                case "Sort by title":
-                    sortBooksByTitle();
-                    break;
-                case "Sort by natural order":
-                    sortBooksByNaturalOrder();
-                    break;
-                case "Search book by title":
-                    searchBookByTitle();
-                    break;
-                case "Search books by author":
-                    searchBooksByAuthor();
-                    break;
-                default:
-                    outputArea.append("Unknown algorithm selected.\n");
-            }
-        }
-
-        private void showElapsedTime(long elapsedTime) {
-            long minutes = (elapsedTime / 1000) / 60;
-            long seconds = (elapsedTime / 1000) % 60;
-            long milliseconds = elapsedTime % 1000;
-
-            JOptionPane.showMessageDialog(this,
-                    "Time elapsed: " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds",
-                    "Time Elapsed",
-                    JOptionPane.INFORMATION_MESSAGE);
-        }
-
-
-
-            private void sortBooksByTitle() {
-                startTime = System.currentTimeMillis();
+    private void sortBooksByTitle() {
+        startTime = System.currentTimeMillis();
         List<Book> sortedBooks = StreamSupport.stream(dataStructure.values().spliterator(), false)
                 .sorted(Comparator.comparing(Book::getTitle))
                 .collect(Collectors.toList());
         updateTableWithSortedData(sortedBooks);
 
-                long elapsedTime = System.currentTimeMillis() - startTime;
-                showElapsedTime(elapsedTime);
+        long elapsedTime = System.currentTimeMillis() - startTime;
+        showElapsedTime(elapsedTime);
     }
 
     private void sortBooksByNaturalOrder() {
-            long startTime = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         List<Book> sortedBooks = StreamSupport.stream(dataStructure.values().spliterator(), false)
                 .sorted()
                 .collect(Collectors.toList());
@@ -401,6 +343,99 @@ public class FrontEndGUI extends JFrame implements ActionListener {
     }
 
 
+    private void printDataStructureType() {
+        if (dataStructure instanceof LinkedListDS) {
+            outputArea.append("Data structure is now a LinkedList.\n");
+        } else if (dataStructure instanceof ArrayListDS) {
+            outputArea.append("Data structure is now an ArrayList.\n");
+        } else if (dataStructure instanceof TreeMapDS) {
+            outputArea.append("Data structure is now a TreeMap.\n");
+        } else {
+            outputArea.append("Data structure is of unknown type.\n");
+        }
+    }
+
+
+    private void runDataStructure() {
+        if (dataStructureGroup.getSelection() != null) {
+            String selectedDataStructure = dataStructureGroup.getSelection().getActionCommand();
+
+            System.out.println("Selected data structure before switch: " + selectedDataStructure);
+
+            if (!selectedDataStructure.equals(currentDataStructure)) {
+                long startTime = System.currentTimeMillis();
+
+                switch (selectedDataStructure) {
+                    case "ArrayList":
+                        convertToArrayListDS();
+                        break;
+                    case "TreeMap":
+                        convertToTreeMapDS();
+                        break;
+                    case "LinkedList":
+                        convertToLinkedListDS();
+                        break;
+                }
+
+                long endTime = System.currentTimeMillis();
+                long elapsedTime = endTime - startTime;
+
+                long minutes = (elapsedTime / 1000) / 60;
+                long seconds = (elapsedTime / 1000) % 60;
+                long milliseconds = elapsedTime % 1000;
+
+                String message = String.format("Switched data from data structure %s to data structure %s. Time elapsed: %d:%02d:%03d",
+                        currentDataStructure, selectedDataStructure, minutes, seconds, milliseconds);
+                JOptionPane.showMessageDialog(this, message, "Data Structure Switch", JOptionPane.INFORMATION_MESSAGE);
+
+                currentDataStructure = selectedDataStructure;
+
+                printDataStructureType();
+
+            } else {
+                System.out.println("Data structure is already selected: " + selectedDataStructure);
+            }
+
+        } else {
+            outputArea.append("Please select a data structure.\n");
+        }
+    }
+
+    private void convertToArrayListDS() {
+        DataStructure<String, Book> newDataStructure = new ArrayListDS<>();
+        for (Book book : dataStructure.values()) {
+            if (book != null) {
+                newDataStructure.put(book.getTitle(), book);
+            }
+        }
+        dataStructure = newDataStructure;
+
+        printDataStructureType();
+    }
+
+    private void convertToTreeMapDS() {
+        DataStructure<String, Book> newDataStructure = new TreeMapDS<>();
+        for (Book book : dataStructure.values()) {
+            if (book != null) {
+                newDataStructure.put(book.getTitle(), book);
+            }
+        }
+        dataStructure = newDataStructure;
+
+        printDataStructureType();
+    }
+
+    private void convertToLinkedListDS() {
+        DataStructure<String, Book> newDataStructure = new LinkedListDS<>();
+        for (Book book : dataStructure.values()) {
+            if (book != null) {
+                newDataStructure.put(book.getTitle(), book);
+            }
+        }
+        dataStructure = newDataStructure;
+
+        printDataStructureType();
+    }
 
     private void updateTableWithSortedData(List<Book> sortedData) {
         DefaultTableModel tableModel = (DefaultTableModel) dataTable.getModel();
@@ -413,5 +448,7 @@ public class FrontEndGUI extends JFrame implements ActionListener {
         dataTable.repaint();
     }
 
-
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(FrontEndGUI::new);
+    }
 }
