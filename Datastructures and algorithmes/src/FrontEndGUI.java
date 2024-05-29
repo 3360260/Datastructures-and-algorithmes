@@ -447,8 +447,4 @@ public class FrontEndGUI extends JFrame implements ActionListener {
 
         dataTable.repaint();
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(FrontEndGUI::new);
-    }
 }
